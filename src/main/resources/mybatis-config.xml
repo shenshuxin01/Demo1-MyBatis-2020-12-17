@@ -28,6 +28,8 @@
     </environments>
 
     <mappers>
-        <mapper class="zkr.ssx.dao.UserMapper" />
+<!--        <mapper class="zkr.ssx.dao.UserMapper" />-->
+<!--        <mapper class="zkr.ssx.dao.SpringUserMapper" />-->
+        <package name="zkr.ssx.dao"/>
     </mappers>
 </configuration>
