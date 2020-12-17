@@ -124,6 +124,13 @@
                 <version>${org.springframework.version}</version>
             </dependency>
 
+            <!-- Spring expression -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${org.springframework.version}</version>
+            </dependency>
+
             <!-- junit 单元测试依耐 -->
             <dependency>
                 <groupId>junit</groupId>
