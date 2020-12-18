@@ -7,6 +7,7 @@ import zkr.ssx.entity.User;
 @CacheNamespace(blocking = true)
 public interface UserMapper {
 
+
     @Select("select * from user where user_name = #{userName} ")
     @Results(id = "userMap",
              value = {

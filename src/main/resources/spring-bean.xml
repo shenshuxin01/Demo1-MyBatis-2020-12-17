@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-
+<context:component-scan base-package="zkr.ssx.service" ></context:component-scan>
+<context:component-scan base-package="zkr.ssx.entity"></context:component-scan>
     <bean id="qaid" class="zkr.ssx.service.QueryUser">
 
     </bean>
@@ -11,6 +13,16 @@
 
     <bean id="userbeanid" class="zkr.ssx.entity.SpringUser">
 
+<!--        构造函数-->
+        <constructor-arg name="id" ><value>a</value></constructor-arg>
+        <constructor-arg name="name"><value>aa</value></constructor-arg>
+
+<!--        set-->
+        <property name="id" value="a"></property>
+        <property name="name" ref="xxxid"></property>
+
+    </bean>
+    <bean id="xxxid" class="java.lang.String" scope="singleton" init-method="getBytes" destroy-method="getBytes" xml:id="qq">
     </bean>
 
 </beans>

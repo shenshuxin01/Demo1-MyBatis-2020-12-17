@@ -1,7 +1,10 @@
 package zkr.ssx.entity;
 
+import org.springframework.stereotype.Repository;
+
 import java.io.Serializable;
 
+@Repository
 public class User implements Serializable {
     private String userName;
     private String passWord;
